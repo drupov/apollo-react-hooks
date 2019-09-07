@@ -20,3 +20,11 @@ export const PLAYERS = gql`
   }
 }
 `;
+
+export const CREATE_PLAYER = gql`
+mutation CreatePlayer ($first_name: String!, $last_name: String!) {
+  createPlayer (data: {first_name: $first_name, last_name: $last_name}) {
+    id
+  }
+}
+`;
